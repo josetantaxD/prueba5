@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(194, 75, 154);
+}
+
+/* BARRA DE MENU */
+
+.navegacion{
+    width: 1000px;
+    background-color: white;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+.MENU>li{
+    position: relative;
+    display: inline-block;
+}
+
+.MENU>li>a{
+    display: inline-block;
+    padding: 20px 50px;
+    color: green;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+.MENU>li>a:hover{
+    background-color: rgb(10, 10, 161);
+    color: white;
+}
+/* SUB MENU */
+.SUB-MENU{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.SUB-MENU li a{
+    display: block;
+    padding: 7px;
+    color: green;
+    text-decoration: none;
+}
+.MENU li:hover .SUB-MENU{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.SUB-MENU>li>a:hover{
+    color: red;
+    transition: 0.5s;
+}
+/* ESTILOS DEL TITULO */
+.TITULO{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.TITULO h1{
+    margin-top: 40px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Otomanopee One', sans-serif;
+}
+.TITULO h3{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.TITULO img{
+    margin-top: 40px;
+}
+
+/* ESTILOS DE BOTONES */
+#boton-mas{
+    display: none;
+}
+.ICONOS{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.redes a, .icon-mas{
+    display: block;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+.redes a:hover{
+    background-color: white;
+    color: red;
+} 
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#boton-mas:checked~ .redes a{
+    margin-bottom: 15px;
+    opacity: 1;
+    visibility: visible;
+}
